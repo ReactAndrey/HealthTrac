@@ -1,0 +1,293 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ht_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".planner.addactivity.HTAddActivitySelectItemActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/scrollViewContentLayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/descriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/ht_white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/descriptionEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ht_text_field1"
+                    android:hint="Activity description"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/ht_color_light_gray_text"
+                    android:capitalize="sentences" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="vertical"
+            android:id="@+id/durationLayout"
+            android:background="@color/ht_white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/durationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toLeftOf="@+id/quantityEdit"
+                    android:layout_toStartOf="@+id/quantityEdit"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/duration_minutes"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/durationEdit"
+                    android:layout_width="90dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ht_text_field"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="vertical"
+            android:id="@+id/caloriesBurnedLayout"
+            android:background="@color/ht_white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/caloriesBurnedLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/calories_burned"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/caloriesBurnedEdit"
+                    android:layout_width="90dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ht_text_field"
+                    android:gravity="center_vertical|right"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            </LinearLayout>
+
+            <!-- <RelativeLayout
+                android:id="@+id/addPlannerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/addPlannerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/add_to_planner"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/plannerTimeEdit"
+                    android:layout_width="90dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ht_text_field"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="18sp" />
+            </RelativeLayout> -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="vertical"
+            android:id="@+id/textReminderLayout"
+            android:background="@color/ht_white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/textReminderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/text_reminder"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/reminderTimeEdit"
+                    android:layout_width="90dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/ht_blue"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="vertical"
+            android:id="@+id/addFavoritesLayout"
+            android:background="@color/ht_white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/addFavoritesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/add_to_favorites"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/favoriteCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

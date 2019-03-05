@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    tools:context="com.sph.healthtrac.more.myaccount.HTMyAccountFoodPrefsActivity">
+
+    <ScrollView
+        android:id="@+id/scrollViewSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/updateBtn">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFoodPrefs"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/nobeefLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nobeefLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_beef"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nobeefCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/noporkLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/noporkLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_pork"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/noporkCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/nofishLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nofishLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_fish"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nofishCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/noshellfishLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/noshellfishLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_shellfish"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/noshellfishCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/nodairyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nodairyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_dairy"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nodairyCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/noeggLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/noeggLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_egg"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/noeggCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/nosoyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nosoyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_soy"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nosoyCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/noglutenLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/noglutenLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_gluten"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/noglutenCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/nowheatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nowheatLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_wheat"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nowheatCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/notreenutsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/notreenutsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_tree_nuts"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/notreenutsCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/nopeanutsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nopeanutsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_peanuts"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nopeanutsCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/nomeatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/ht_white">
+
+                <TextView
+                    android:id="@+id/nomeatLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/no_meat"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/nomeatCheck"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/ht_check_off_green" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/additionalFoodIntroLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebf0f2"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:text="@string/addtional_food_introduction"
+                android:textColor="@color/ht_gray_title_text"
+                android:textSize="14sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="101dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ebf0f2">
+                <EditText
+                    android:id="@+id/additionalFoodEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/ht_white"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp"
+                    android:gravity="top"
+                    android:textSize="14sp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textColorHint="@color/ht_gray_title_text"
+                    android:hint="Enter additional food restrictions here"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="UPDATE"
+        android:id="@+id/updateBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#71ca5e"
+        android:textColor="@color/ht_white"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

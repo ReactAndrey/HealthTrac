@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:id="@+id/colorMyDayRow">
+
+        <ImageView
+            android:id="@+id/imageViewColorReminderIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ht_reminder"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/textViewColorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/imageViewColorReminderIcon"
+            android:layout_toEndOf="@+id/imageViewColorReminderIcon"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageViewGreenButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="29dp"
+            android:src="@drawable/ht_color_button_green_off"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/imageViewYellowButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="29dp"
+            android:layout_toRightOf="@+id/imageViewGreenButton"
+            android:layout_toEndOf="@+id/imageViewGreenButton"
+            android:src="@drawable/ht_color_button_yellow_off"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/imageViewRedButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="29dp"
+            android:layout_toRightOf="@+id/imageViewYellowButton"
+            android:layout_toEndOf="@+id/imageViewYellowButton"
+            android:src="@drawable/ht_color_button_red_off"
+            android:scaleType="center" />
+
+        <View
+            android:id="@+id/viewGraySeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffd7e2e6" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

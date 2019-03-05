@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ht_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.sph.healthtrac.more.inbox.HTInboxComposeActivity">
+
+    <ScrollView
+        android:id="@+id/scrollViewCompose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:fillViewport="true"
+        android:background="@color/transparent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/ht_gray_separator" >
+
+            <LinearLayout
+                android:id="@+id/generalMsgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp">
+                    <TextView
+                        android:id="@+id/toLabelView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="To:"
+                        android:textColor="@color/ht_gray_title_text"
+                        android:textSize="14sp"/>
+                    <TextView
+                        android:id="@+id/destLabelView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="My Practice"
+                        android:textColor="@color/ht_gray_title_text"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/subjectEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/ht_text_field_white"
+                    android:hint="Subject"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/ht_color_light_gray_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/supportMsgHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp">
+                    <TextView
+                        android:id="@+id/supportHeaderLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="I would like help with:"
+                        android:textColor="@color/ht_gray_title_text"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/categoryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/ht_text_field_white"
+                    android:text="Select..."
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/categoryDescView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:layout_margin="7dp"
+                android:padding="8dp"
+                android:ems="10"
+                android:id="@+id/messageEditView"
+                android:gravity="top|left"
+                android:background="@color/ht_white"
+                android:textColor="@color/ht_gray_title_text"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

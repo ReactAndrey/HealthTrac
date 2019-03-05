@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="ht_white">#ffffff</color>
+    <color name="ht_blue">#74ccf0</color> <!-- 116, 204, 240 -->
+    <color name="ht_bar_green">#ffbbe345</color> <!-- 187, 227, 69 -->
+    <color name="ht_bar_orange">#fff7a861</color> <!-- 247, 168, 97 -->
+    <color name="ht_gray_text">#ff727e85</color> <!-- 114, 126, 133 -->
+    <color name="ht_gray_title_text">#ff757c80</color> <!-- 117, 124, 128 -->
+    <color name="ht_gray_separator">#ffebf0f2</color> <!-- 235, 240, 242 -->
+    <color name="ht_gray_calendar_header">#87757c80</color> <!-- 117, 124, 128 .53a -->
+    <color name="ht_gray_calendar_text">#ff808080</color> <!-- 128, 128, 128 -->
+
+    <color name="ht_color_gray_text">#ff626262</color> <!-- 98, 98, 98 -->
+    <color name="ht_color_light_gray_text">#ffb2b2b2</color> <!-- 178, 178, 178 -->
+    <color name="ht_color_green_text">#ff70c36a</color> <!-- 112, 195, 106 -->
+    <color name="ht_color_yellow_text">#ffefc678</color> <!-- 239, 198, 120 -->
+    <color name="ht_color_red_text">#ffdd6969</color> <!-- 221, 105, 105 -->
+
+    <color name="ht_text_field_bg">#fff7f9fa</color> <!-- 247, 249, 250 -->
+    <color name="ht_color_border">#ffc2c8cc</color> <!-- 247, 249, 250 -->
+</resources>

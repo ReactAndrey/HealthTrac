@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="#ffffffff" >
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/ht_blue" />
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:textAllCaps="false"
+        android:textColor="@color/ht_blue"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|start"
+        style="?android:attr/borderlessButtonStyle"
+        android:paddingLeft="16dp" />
+
+    <ImageView
+        android:id="@+id/leftArrowAction"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="center"
+        style="?android:attr/borderlessButtonStyle"
+        android:contentDescription="leftArrowAction"
+        android:src="@drawable/ht_nav_bar_button_back_arrow" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginEnd="0dp"
+        android:textAllCaps="false"
+        android:textColor="@color/ht_blue"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|end"
+        style="?android:attr/borderlessButtonStyle"
+        android:paddingRight="16dp" />
+
+    <ImageView
+        android:id="@+id/rightCheckAction"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center"
+        style="?android:attr/borderlessButtonStyle"
+        android:contentDescription="rightCheckAction"
+        android:src="@drawable/ht_nav_bar_button_check" />
+
+    <View
+        android:id="@+id/viewGraySeparator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffebf0f2" />
+
+</RelativeLayout>

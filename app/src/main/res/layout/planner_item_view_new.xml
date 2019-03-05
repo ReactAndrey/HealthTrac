@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:minHeight="44dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/caloriesView"
+        android:layout_marginRight="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notesLabel"
+            android:textColor="#2c2d2e"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:layout_marginBottom="-2dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subnotesLabel"
+            android:textColor="#2c2d2e"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:layout_marginTop="-2dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/caloriesView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="13sp"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/ht_blue"
+        android:gravity="right"
+        android:layout_width="50dp" />
+
+</RelativeLayout>

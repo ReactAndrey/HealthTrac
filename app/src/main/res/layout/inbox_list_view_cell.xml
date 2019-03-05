@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:background="#ffffffff"
+    android:minHeight="90dp">
+
+    <TextView
+        android:id="@+id/msgSubjectLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/createDateLabel"
+        android:layout_toStartOf="@+id/createDateLabel"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createDateLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@+id/msgSubjectLabel"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/msgNoteLabel"
+        android:layout_alignLeft="@+id/msgSubjectLabel"
+        android:layout_alignStart="@+id/msgSubjectLabel"
+        android:layout_below="@+id/msgSubjectLabel"
+        android:layout_marginBottom="16dp"
+        android:layout_alignRight="@+id/msgSubjectLabel"
+        android:layout_alignEnd="@+id/msgSubjectLabel"
+        android:maxLines="2"
+        android:minLines="2"
+        android:lines="2"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp" />
+
+    <View
+        android:id="@+id/viewGraySeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffd7e2e6" />
+
+</RelativeLayout>

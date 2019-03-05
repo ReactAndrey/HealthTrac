@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/learnContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".learn.LearnActivity"
+    android:background="@color/ht_gray_separator">
+
+    <ScrollView
+        android:id="@+id/scrollViewLearn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLearnModules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

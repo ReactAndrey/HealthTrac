@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="144dp"
+    android:layout_height="64dp"
+    android:background="@drawable/ht_applet_button" >
+
+    <ImageView
+        android:id="@+id/appletIcon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="AppletButton" />
+
+    <TextView
+        android:id="@+id/appletText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/ht_gray_text" />
+
+</RelativeLayout>

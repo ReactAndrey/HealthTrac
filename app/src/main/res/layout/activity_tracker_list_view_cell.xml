@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/activityTrackerRow">
+
+        <ImageView
+            android:id="@+id/imageViewActivityTrackerReminderIcon"
+            android:layout_width="36dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ht_reminder"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/textViewActivityLabel"
+            android:layout_width="70dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/imageViewActivityTrackerReminderIcon"
+            android:layout_toEndOf="@+id/imageViewActivityTrackerReminderIcon"
+            android:layout_toLeftOf="@+id/editTextActivityValue"
+            android:layout_toStartOf="@+id/editTextActivityValue"
+            android:gravity="center_vertical"
+            android:text="Weight Steps"
+            android:layout_height="59dp" />
+
+        <EditText
+            android:layout_width="70dp"
+            android:layout_height="31dp"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editTextActivityValue"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@+id/editTextActivityGoal"
+            android:layout_toStartOf="@+id/editTextActivityGoal"
+            android:layout_marginRight="9dp"
+            android:layout_marginEnd="9dp"
+            android:background="@drawable/ht_text_field"
+            android:gravity="center_vertical|end"
+            android:maxLength="6" />
+
+        <EditText
+            android:layout_width="70dp"
+            android:layout_height="31dp"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/editTextActivityGoal"
+            android:layout_marginTop="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ht_text_field"
+            android:gravity="center_vertical|end"
+            android:maxLength="6" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageViewActivityValueCheck"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <View
+            android:id="@+id/viewGraySeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffd7e2e6" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:background="#ffffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:id="@+id/moreRow">
+
+        <ImageView
+            android:id="@+id/imageViewMoreIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:contentDescription="moreIcon" />
+
+        <TextView
+            android:id="@+id/textViewMoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="" />
+
+        <View
+            android:id="@+id/viewGraySeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffd7e2e6" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/badge_bg"
+            android:layout_toRightOf="@+id/imageViewMoreIcon"
+            android:layout_marginLeft="-8dp"
+            android:layout_marginTop="10dp"
+            android:minWidth="16dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/badgeLayout"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/badgeTextView"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginTop="-5dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

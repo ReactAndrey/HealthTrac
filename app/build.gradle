@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    flavorDimensions "default"
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a', 'x86_64'
+            universalApk true
+        }
+    }
+    signingConfigs {
+        config {
+            keyAlias 'healthtrac_key'
+            keyPassword '3Balance!'
+            storeFile file('C:/clean/ANDROID APP SCREEN SHOTS ETC/healthtrac_keystore.keystore')
+            storePassword '3Balance!'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion '23.0.3'
+    useLibrary  'org.apache.http.legacy'
+    defaultConfig {
+        //applicationId "com.sph.healthtrac"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionName '3.17'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        healthTrac {
+            applicationId "com.sph.healthtrac"
+            //versionName "3.10-ht"
+        }
+        trackMyDay {
+            applicationId "com.cnrct.trackmyday"
+            //versionName "3.10-tmd"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.google.android.gms:play-services:8.3.0'
+    compile 'com.android.support:support-v4:23.1.1'
+    implementation 'org.apache.directory.studio:org.apache.commons.io:2.4'
+
+    compile files('libs/ZBarDecoder.jar')
+}

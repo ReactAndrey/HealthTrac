@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="62dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#fff5f8fa">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/colorView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateView"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/colorView"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@+id/editPencilBtn"
+            android:textSize="15sp"
+            android:textColor="@color/ht_gray_title_text" />
+
+        <ImageButton
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:id="@+id/editPencilBtn"
+            android:layout_alignParentRight="true"
+            android:background="#0000"
+            android:src="@drawable/ht_journal_pencil" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/viewGraySeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffd7e2e6" />
+</LinearLayout>

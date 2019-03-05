@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="59dp">
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:id="@+id/reminderButton"
+        android:src="@drawable/ht_reminder_on"
+        android:layout_marginLeft="38dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/viewBorder"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffb2b2b2"
+        android:layout_marginLeft="71dp"
+        android:layout_marginRight="9dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewBorder"
+        android:layout_marginLeft="71dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/ht_planitem_bg"
+        android:id="@+id/plannerBlock">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:id="@+id/plannerItemIconView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ht_planner_meal_empty" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notesLabel"
+                android:textColor="@color/ht_gray_title_text"
+                android:textSize="14sp"
+                android:singleLine="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subnotesLabel"
+                android:layout_marginTop="2dp"
+                android:visibility="gone"
+                android:textColor="@color/ht_gray_title_text"
+                android:textSize="10sp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    android:background="@android:color/transparent"
+    android:minHeight="74dp">
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ht_dash_edit_check" />
+
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@+id/imageViewIcon"
+        android:layout_toEndOf="@+id/imageViewIcon"
+        android:gravity="center_vertical" />
+
+    <ImageView
+        android:id="@+id/imageViewArrow"
+        android:layout_width="27dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ht_dash_edit_menu" />
+
+    <View
+        android:id="@+id/viewGraySeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffd7e2e6" />
+
+</RelativeLayout>

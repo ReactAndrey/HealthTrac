@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ht_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".planner.createplan.HTCreateEatingPlanActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:background="@color/ht_white"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ht_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/heightLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/ht_white"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/heightLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:text="@string/height"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/heightEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ht_text_field"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ebf0f2"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:id="@+id/weightLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/ht_white"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/weightLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:text="@string/weight"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/weightEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ht_text_field"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:id="@+id/ageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/ht_white"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/ageLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:text="@string/age"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ageEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ht_text_field"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:id="@+id/sexLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/ht_white"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/sexLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:text="@string/sex"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sexEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ht_text_field"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:id="@+id/activityLevelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/ht_white"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/activityLevelLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:text="@string/activity_level"
+                    android:textColor="#2e2e2e"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/activityLevelEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ht_text_field"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="13sp"
+                    android:gravity="center_vertical|right" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7e2e6"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ht_white">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/calculate"
+                    android:id="@+id/calculateBtn"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="#71ca5e"
+                    android:textColor="@color/ht_white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

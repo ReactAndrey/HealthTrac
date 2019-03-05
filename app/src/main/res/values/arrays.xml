@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quantity_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="quantity_fraction_values">
+        <item>.00</item>
+        <item>.25</item>
+        <item>.50</item>
+        <item>.75</item>
+    </string-array>
+
+    <string-array name="activity_levels">
+        <item>Base Metabolic Rate (1.0)</item>
+        <item>Sedentary (1.2)</item>
+        <item>Lightly Active (1.3)</item>
+        <item>Moderately Active (1.5)</item>
+        <item>Very Active (1.7)</item>
+        <item>Extra Active (1.9)</item>
+    </string-array>
+
+    <string-array name="activity_level_labels">
+        <item>Base Metabolic Rate</item>
+        <item>Sedentary</item>
+        <item>Lightly Active</item>
+        <item>Moderately Active</item>
+        <item>Very Active</item>
+        <item>Extra Active</item>
+    </string-array>
+
+    <string-array name="meal_types">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+    </string-array>
+
+    <string-array name="activity_level_values">
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.375</item>
+        <item>1.55</item>
+        <item>1.725</item>
+        <item>1.9</item>
+    </string-array>
+
+    <string-array name="sex_types">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="ft_array">
+        <item>4 ft</item>
+        <item>5 ft</item>
+        <item>6 ft</item>
+    </string-array>
+
+    <string-array name="inch_array">
+        <item>0 in</item>
+        <item>1 in</item>
+        <item>2 in</item>
+        <item>3 in</item>
+        <item>4 in</item>
+        <item>5 in</item>
+        <item>6 in</item>
+        <item>7 in</item>
+        <item>8 in</item>
+        <item>9 in</item>
+        <item>10 in</item>
+        <item>11 in</item>
+    </string-array>
+
+</resources>

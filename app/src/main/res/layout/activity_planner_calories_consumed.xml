@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ht_white"
+    tools:context=".planner.HTPlannerCaloriesConsumedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        android:background="#f5f8fa">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@color/ht_white">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/dayButton"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:text="Day"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:id="@+id/dayLabelView" />
+                <View
+                    android:id="@+id/dayIndicator"
+                    android:layout_width="54dp"
+                    android:layout_height="3dp"
+                    android:background="#ff74ccf0"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/weekButton"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:text="Week"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:id="@+id/weekLabelView" />
+                <View
+                    android:id="@+id/weekIndicator"
+                    android:layout_width="54dp"
+                    android:layout_height="3dp"
+                    android:background="#ff74ccf0"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/viewGraySeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffd9e3e7"
+            android:layout_gravity="center_vertical" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dailyConsumedView">
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/dailyContentView"
+                        android:background="#f5f8fa">
+                        <View
+                            android:id="@+id/viewGraySeparator1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffd9e3e7"
+                            android:layout_gravity="center_vertical" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="66dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/ht_white"
+                            android:id="@+id/caloriesPlanView"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="12dp"
+                            android:paddingRight="16dp"
+                            android:paddingBottom="12dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25"
+                                android:id="@+id/goalView"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="26dp"
+                                    android:id="@+id/goalValue"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:textColor="#2c2d2e"
+                                    android:textSize="16sp"
+                                    android:text="1200" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="14dp"
+                                    android:text="@string/goal"
+                                    android:id="@+id/goalLabel"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#9da1a3"
+                                    android:textSize="10sp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="16dp"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="17sp"
+                                android:textColor="#9da1a3"
+                                android:gravity="center"
+                                android:layout_marginBottom="7dp"
+                                android:id="@+id/minusSignView" />
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25"
+                                android:id="@+id/consumedView"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="26dp"
+                                    android:id="@+id/consumedValue"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:textColor="#2c2d2e"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="14dp"
+                                    android:text="@string/consumed"
+                                    android:id="@+id/consumedLabel"
+                                    android:textColor="#9da1a3"
+                                    android:textSize="10sp"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="16dp"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="17sp"
+                                android:textColor="#9da1a3"
+                                android:gravity="center"
+                                android:layout_marginBottom="7dp"
+                                android:id="@+id/plusSignView" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25"
+                                android:id="@+id/exerciseView"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="26dp"
+                                    android:id="@+id/exerciseValue"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:textColor="#2c2d2e"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="14dp"
+                                    android:text="@string/exercise"
+                                    android:id="@+id/exerciseLabel"
+                                    android:textColor="#9da1a3"
+                                    android:textSize="10sp"
+                                    android:layout_gravity="center_horizontal" />
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="16dp"
+                                android:layout_height="wrap_content"
+                                android:text="="
+                                android:layout_gravity="center_vertical"
+                                android:textSize="17sp"
+                                android:textColor="#9da1a3"
+                                android:gravity="center"
+                                android:layout_marginBottom="7dp"
+                                android:id="@+id/equalSignView" />
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.25"
+                                android:id="@+id/remainingView"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="26dp"
+                                    android:id="@+id/remainingValue"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:textColor="@color/ht_gray_title_text"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="14dp"
+                                    android:text="@string/remaining"
+                                    android:id="@+id/remainingLabel"
+                                    android:textColor="#9da1a3"
+                                    android:textSize="10sp"
+                                    android:layout_gravity="center_horizontal" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:id="@+id/viewGraySeparator2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#ffd9e3e7"
+                            android:layout_gravity="center_vertical" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/ht_white"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/daily_nutrition_summary"
+                                android:id="@+id/summaryLabel"
+                                android:textColor="@color/ht_blue"
+                                android:textSize="13sp" />
+
+                            <View
+                                android:id="@+id/viewblueSeparator"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/ht_blue" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/carbs"
+                                    android:id="@+id/carbsLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/carbsValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/ht_blue"
+                                android:layout_marginTop="1dp" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fiber"
+                                    android:id="@+id/fiberLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/fiberValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@color/ht_blue" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sugars"
+                                    android:id="@+id/sugarsLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/sugarsValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@color/ht_blue" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/protein"
+                                    android:id="@+id/proteinLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/proteinValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@color/ht_blue" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/total_fat"
+                                    android:id="@+id/totalFatLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/totalFatValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@color/ht_blue" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sat_fat"
+                                    android:id="@+id/satfatLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/satfatValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@color/ht_blue" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sodium"
+                                    android:id="@+id/sodiumLabel"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#626566" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/sodiumValue"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="73dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@color/ht_white"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="6dp"
+                            android:paddingTop="6dp"
+                            android:id="@+id/caloriesPercentLayout">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="57dp"
+                                android:layout_gravity="center_horizontal">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.25"
+                                    android:id="@+id/cabsPercentView"
+                                    android:layout_gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="26dp"
+                                        android:id="@+id/carbsPercentValueView"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:textColor="#2c2d2e"
+                                        android:textSize="24sp"
+                                        android:text="0%" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="14dp"
+                                        android:text="@string/carbs"
+                                        android:id="@+id/carbsLabelView"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#9da1a3"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.25"
+                                    android:id="@+id/proteinPercentView"
+                                    android:layout_gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="26dp"
+                                        android:id="@+id/proteinPercentValueView"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:textColor="#2c2d2e"
+                                        android:textSize="24sp"
+                                        android:text="0%" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="14dp"
+                                        android:text="@string/protein"
+                                        android:id="@+id/proteinLabelView"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#9da1a3"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.25"
+                                    android:id="@+id/fatPercentView"
+                                    android:layout_gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="26dp"
+                                        android:id="@+id/fatPercentValueView"
+                                        android:gravity="center"
+                                        android:layout_marginLeft="4dp"
+                                        android:layout_marginRight="4dp"
+                                        android:textColor="#2c2d2e"
+                                        android:textSize="24sp"
+                                        android:text="0%" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="14dp"
+                                        android:text="@string/fat"
+                                        android:id="@+id/fatLabelView"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textColor="#9da1a3"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/rightArrow"
+                                    android:layout_width="41dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:scaleType="center"
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:contentDescription="rightArrow"
+                                    android:src="@drawable/ht_arrow_right_inactive"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="8dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="4dp"
+                                android:background="#ecf1f3">
+                                <View
+                                    android:id="@+id/carbsPercentBar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0"
+                                    android:background="@color/ht_blue"/>
+                                <View
+                                    android:id="@+id/proteinPercentBar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0"
+                                    android:background="@color/ht_bar_green" />
+                                <View
+                                    android:id="@+id/fatPercentBar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0"
+                                    android:background="@color/ht_bar_orange" />
+                                <!--<View
+                                    android:id="@+id/emptyBar"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0"
+                                    android:background="@color/transparent" />-->
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/weeklyConsumedView">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="false">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/weeklyContentView">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="259dp"
+                            android:id="@+id/chartLayout"
+                            android:background="@color/ht_white"
+                            android:paddingTop="22dp"
+                            android:paddingRight="16dp">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="15dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/yAxisLabel1"
+                                    android:textSize="9sp"
+                                    android:gravity="center_vertical|left"
+                                    android:textColor="#363738" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/yAxisLabel2"
+                                    android:gravity="center_vertical|left"
+                                    android:textSize="9sp"
+                                    android:layout_marginTop="28dp"
+                                    android:textColor="#363738" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/yAxisLabel3"
+                                    android:gravity="center_vertical|left"
+                                    android:textSize="9sp"
+                                    android:layout_marginTop="28dp"
+                                    android:textColor="#363738" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/yAxisLabel4"
+                                    android:gravity="center_vertical|left"
+                                    android:textSize="9sp"
+                                    android:layout_marginTop="28dp"
+                                    android:textColor="#363738" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:id="@+id/yAxisLabel5"
+                                    android:gravity="center_vertical|left"
+                                    android:textSize="9sp"
+                                    android:layout_marginTop="28dp"
+                                    android:textColor="#363738" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="48dp"
+                                android:background="#ecf1f3"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="58dp"
+                                android:layout_marginLeft="48dp"
+                                android:background="#ecf1f3"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="106dp"
+                                android:layout_marginLeft="48dp"
+                                android:background="#ecf1f3"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="154dp"
+                                android:layout_marginLeft="48dp"
+                                android:background="#ecf1f3"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="202dp"
+                                android:layout_marginLeft="48dp"
+                                android:background="#686c6e"/>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="205dp"
+                                android:layout_marginLeft="48dp"
+                                android:id="@+id/xAxisLabelLayout1"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"></LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="205dp"
+                                android:layout_marginLeft="48dp"
+                                android:id="@+id/xAxisLabelLayout2"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"></LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="205dp"
+                                android:layout_marginLeft="48dp"
+                                android:id="@+id/xAxisLabelLayout3"
+                                android:paddingRight="2dp"
+                                android:paddingLeft="2dp"></LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="205dp"
+                                android:layout_marginLeft="48dp"
+                                android:id="@+id/xAxisLabelLayout4"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"></LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="192dp"
+                                android:layout_marginLeft="48dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:id="@+id/chartContentLayout1"></LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="192dp"
+                                android:layout_marginLeft="48dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:id="@+id/chartContentLayout2"></LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="192dp"
+                                android:layout_marginLeft="48dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:id="@+id/chartContentLayout3"></LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="192dp"
+                                android:layout_marginLeft="48dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:id="@+id/chartContentLayout4"></LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:id="@+id/targetCaloriesIndicatorLayout"
+                                android:layout_marginLeft="11.5dp">
+
+                                <RelativeLayout
+                                    android:layout_width="33dp"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/targetCaloriesBtn">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ht_arrow_target_calories"
+                                        android:layout_centerInParent="true" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/targetCaloriesLabel"
+                                        android:textColor="#ffffff"
+                                        android:textSize="9sp"
+                                        android:singleLine="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="3.5dp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginLeft="3.5dp"
+                                    android:background="#d7d8d8"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical" />
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="49dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:background="@color/ht_white">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="28dp"
+                                android:id="@+id/oneWeekBtn"
+                                android:layout_weight="0.1"
+                                android:background="#f5f8f9">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="26dp"
+                                    android:text="1W"
+                                    android:textColor="@color/ht_gray_title_text"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:id="@+id/oneWeekLabel" />
+                                <View
+                                    android:id="@+id/oneWeekIndicator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#ff74ccf0"
+                                    android:layout_gravity="center_horizontal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="28dp"
+                                android:id="@+id/twoWeeksBtn"
+                                android:layout_weight="0.1"
+                                android:background="#f5f8f9">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="26dp"
+                                    android:text="2W"
+                                    android:textColor="@color/ht_gray_title_text"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:id="@+id/twoWeeksLabel" />
+                                <View
+                                    android:id="@+id/twoWeeksIndicator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#ff74ccf0"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="28dp"
+                                android:id="@+id/oneMonthBtn"
+                                android:layout_weight="0.1"
+                                android:background="#f5f8f9">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="26dp"
+                                    android:text="1M"
+                                    android:textColor="@color/ht_gray_title_text"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:id="@+id/oneMonthLabel" />
+                                <View
+                                    android:id="@+id/oneMonthIndicator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#ff74ccf0"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="28dp"
+                                android:id="@+id/threeMonthsBtn"
+                                android:layout_weight="0.1"
+                                android:background="#f5f8f9">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="26dp"
+                                    android:text="3M"
+                                    android:textColor="@color/ht_gray_title_text"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:id="@+id/threeMonthsLabel" />
+                                <View
+                                    android:id="@+id/threeMonthsIndicator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="#ff74ccf0"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="14dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right">
+
+                                <TextView
+                                    android:layout_width="67dp"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/avg"
+                                    android:id="@+id/avgLabelView"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+
+                                <TextView
+                                    android:layout_width="67dp"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/goal"
+                                    android:id="@+id/goalLabelView"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="#2c2d2e" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="8dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/carbsMarkView"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:src="@drawable/ht_circle_blue"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginBottom="2dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/carbohydrates"
+                                    android:id="@+id/carbsMacroLabel"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/carbsMarkView"
+                                    android:gravity="center_vertical|left"
+                                    android:textColor="#2c2d2e"
+                                    android:textSize="12sp"
+                                    android:layout_centerVertical="true" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:layout_width="67dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0%"
+                                        android:id="@+id/carbsAvgValueView"
+                                        android:textSize="12sp"
+                                        android:gravity="center"
+                                        android:textColor="#822c2d2e" />
+
+                                    <TextView
+                                        android:layout_width="67dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0%"
+                                        android:id="@+id/carbsGoalValueView"
+                                        android:textSize="12sp"
+                                        android:gravity="center"
+                                        android:textColor="#2c2d2e" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#dee3e4"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginLeft="16dp" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="14dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/proteinMarkView"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:src="@drawable/ht_circle_green"
+                                    android:layout_marginBottom="2dp"
+                                    android:layout_marginTop="2dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/protein"
+                                    android:id="@+id/proteinMacroLabel"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/proteinMarkView"
+                                    android:gravity="center_vertical|left"
+                                    android:textColor="#2c2d2e"
+                                    android:textSize="12sp"
+                                    android:layout_centerVertical="true" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true">
+
+                                    <TextView
+                                        android:layout_width="67dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0%"
+                                        android:id="@+id/proteinAvgValueView"
+                                        android:textSize="12sp"
+                                        android:gravity="center"
+                                        android:textColor="#822c2d2e" />
+
+                                    <TextView
+                                        android:layout_width="67dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0%"
+                                        android:id="@+id/proteinGoalValueView"
+                                        android:textSize="12sp"
+                                        android:gravity="center"
+                                        android:textColor="#2c2d2e" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#dee3e4"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginLeft="16dp" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="14dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/fatMarkView"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:src="@drawable/ht_circle_orange"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginBottom="2dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/fat"
+                                    android:id="@+id/fatMacroLabel"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/fatMarkView"
+                                    android:gravity="center_vertical|left"
+                                    android:textColor="#2c2d2e"
+                                    android:textSize="12sp"
+                                    android:layout_centerVertical="true" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true">
+                                    <TextView
+                                        android:layout_width="67dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0%"
+                                        android:id="@+id/fatAvgValueView"
+                                        android:textSize="12sp"
+                                        android:gravity="center"
+                                        android:textColor="#822c2d2e" />
+
+                                    <TextView
+                                        android:layout_width="67dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="0%"
+                                        android:id="@+id/fatGoalValueView"
+                                        android:textSize="12sp"
+                                        android:gravity="center"
+                                        android:textColor="#2c2d2e" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#dee3e4"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginBottom="14dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    tools:context=".tracker.myjournal.MyJournalActivity"
+    android:id="@+id/myJournalContainer">
+
+    <ScrollView
+        android:id="@+id/scrollViewMyJournal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_marginTop="88dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="22dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/editTextMyJournal"
+            android:inputType="textCapSentences|textMultiLine" />
+
+    </ScrollView>
+
+</RelativeLayout>

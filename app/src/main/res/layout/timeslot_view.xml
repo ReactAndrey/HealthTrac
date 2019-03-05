@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:00"
+            android:id="@+id/timeView"
+            android:textSize="13sp"
+            android:gravity="bottom|right"
+            android:textColor="@color/ht_gray_title_text"
+            android:layout_toLeftOf="@+id/amView"
+            android:layout_toStartOf="@+id/amView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="am"
+            android:id="@+id/amView"
+            android:textSize="9sp"
+            android:textColor="@color/ht_gray_title_text"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/timeView"
+            android:layout_marginBottom="1dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewGraySeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffb2b2b2"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="6dp" />
+</LinearLayout>

@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ht_white"
+    tools:context=".planner.addactivity.HTAddActivitySearchActivity">
+
+    <LinearLayout
+        android:id="@+id/headLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@color/ht_gray_separator"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/favoritesTypeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/ht_white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/typeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/type"
+                android:textColor="@color/ht_gray_title_text"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginLeft="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/exerciseCheck"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ht_check_off_green" />
+
+                <TextView
+                    android:id="@+id/exerciseLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/exercise"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/stressMngCheck"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ht_check_off_green" />
+
+                <TextView
+                    android:id="@+id/stressMngLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/stress_management"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/noteCheck"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ht_check_off_green" />
+
+                <TextView
+                    android:id="@+id/noteLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="6dp"
+                    android:text="@string/note"
+                    android:textColor="@color/ht_gray_title_text"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/ht_white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/searchEdit"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ht_text_field"
+                android:hint="Search"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/ht_gray_title_text"
+                android:textSize="14sp"
+                android:textColorHint="@color/ht_color_light_gray_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchResultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/ht_white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/searchResultLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="New Text"
+                    android:textColor="@color/ht_blue"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/searchResultSubLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="New Text"
+                    android:textColor="#a6b3ba"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/searchResultListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_below="@+id/headLayout"
+        android:background="@color/ht_white">
+    </ListView>
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/searchResultScrollView"-->
+        <!--android:layout_below="@+id/headLayout">-->
+
+        <!--<LinearLayout-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/searchResultContentLayout"></LinearLayout>-->
+    <!--</ScrollView>-->
+
+</RelativeLayout>

@@ -978,9 +978,9 @@ public class HTMetricChartActivity extends Activity {
         }
 
         //x axis label
-        for(int i=0; i < dailyChartLabel.size(); i++){
-            Log.i("Daily =",String.valueOf(i) + ":" + dailyChartLabel.get(i));
-        }
+//        for(int i=0; i < dailyChartLabel.size(); i++){
+//            Log.i("Daily =",String.valueOf(i) + ":" + dailyChartLabel.get(i));
+//        }
 
         for(int i = 0; i < 7; i++){
             //xAxisLabels1[i].setText(dailyChartLabel.get(i+23));
@@ -1091,7 +1091,7 @@ public class HTMetricChartActivity extends Activity {
             }
 
             RelativeLayout contentView = (RelativeLayout) mInflater.inflate(R.layout.metric_history_content_view, null);
-            TextView contentLabelView = (TextView) contentView.findViewById(R.id.contentLabelView);
+            final TextView contentLabelView = (TextView) contentView.findViewById(R.id.contentLabelView);
             TextView contentValueView = (TextView) contentView.findViewById(R.id.contentValueView);
             contentLabelView.setTypeface(avenirNextRegularFont);
             contentValueView.setTypeface(avenirNextRegularFont);
@@ -1100,7 +1100,32 @@ public class HTMetricChartActivity extends Activity {
 
             linearParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (44 * displayDensity));
             contentView.setLayoutParams(linearParams);
-            metricHistoryLayout.addView(contentView);
+            final int curInd = metricHistoryLabels.size() - i - 1;
+            contentView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+
+
+                    Date myDate = addDays(currentDate, -curInd);
+
+                    HTGlobals.getInstance().passDate = myDate;
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(myDate);
+
+                    HTGlobals.getInstance().passDay = cal.get(Calendar.DAY_OF_MONTH);
+                    HTGlobals.getInstance().passMonth = cal.get(Calendar.MONTH);
+                    HTGlobals.getInstance().passYear = cal.get(Calendar.YEAR);
+                    //Toast.makeText(HTMetricChartActivity.this,String.valueOf( HTGlobals.getInstance().passYear), Toast.LENGTH_SHORT).show();
+
+
+                    Intent intent = new Intent(HTMetricChartActivity.this, HTMetricChartEditActivity.class);
+                    intent.putExtra("selectedMetric", selectedMetric);
+                    intent.putExtra("selectedCustomMetricString", selectedCustomMetricString);
+                    intent.putExtra("enableFlag", "true");
+                    startActivityForResult(intent, 1);
+                }
+            });
+            metricHistoryLayout.addView(contentView);  // Andrey***
 
             View graySeperator = new View(this);
             graySeperator.setBackgroundColor(Color.rgb(217, 227, 231));

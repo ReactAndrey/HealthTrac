@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -84,7 +85,7 @@ public class HTMetricChartEditActivity extends Activity {
     private TextView exerciseCaloriesView;
     private LinearLayout exercisePlanDetailsLayout;
     private RelativeLayout addExercisePlanLayout;
-
+    private boolean enableFlag;
     private static InputMethodManager imm;
     Calendar calendar;
 
@@ -144,7 +145,12 @@ public class HTMetricChartEditActivity extends Activity {
 
         selectedMetric = getIntent().getStringExtra("selectedMetric");
         selectedCustomMetricString = getIntent().getStringExtra("selectedCustomMetricString");
-
+        String strFlag = "";
+        strFlag = getIntent().getStringExtra("enableFlag");
+        if(strFlag!=null)
+            enableFlag = true;//false; //Andrey
+        else
+            enableFlag = false;
         mainContentLayout = (RelativeLayout) findViewById(R.id.mainContentLayout);
         scrollView = (ScrollView) findViewById(R.id.scrollView);
         scrollView.setVisibility(View.GONE);
@@ -220,7 +226,6 @@ public class HTMetricChartEditActivity extends Activity {
             passYear = HTGlobals.getInstance().passYear;
 
         } else {
-
             passDate = currentDate;
             passDay = currentDayOfMonth;
             passMonth = currentMonth;
@@ -290,28 +295,44 @@ public class HTMetricChartEditActivity extends Activity {
         params.height = (int) (2 * displayDensity);
         viewGraySeparator.setLayoutParams(params);
 
+        // Andrey Start 2019-03-06
+
+       ;
+
         final ImageView leftArrow = (ImageView) datePicker.findViewById(R.id.leftArrow);
         final ImageView rightArrow = (ImageView) datePicker.findViewById(R.id.rightArrow);
+
         mDateTitleTextView = (TextView) datePicker.findViewById(R.id.date_text);
 
-        leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
-        rightArrow.setImageResource(R.drawable.ht_arrow_right_blue);
+        if(enableFlag==false) {
+            leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
+            rightArrow.setImageResource(R.drawable.ht_arrow_right_blue);
 
-        leftArrow.setOnClickListener(new ImageView.OnClickListener() {
+            leftArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                leftDateButtonClicked();
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    leftDateButtonClicked();
+                }
+            });
 
-        rightArrow.setOnClickListener(new ImageView.OnClickListener() {
+            rightArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                rightDateButtonClicked();
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    rightDateButtonClicked();
+                }
+            });
+
+        }
+        else{
+            leftArrow.setImageResource(R.drawable.ht_arrow_left_gray);
+            rightArrow.setImageResource(R.drawable.ht_arrow_right_gray);
+
+            leftArrow.setOnClickListener(null);
+            rightArrow.setOnClickListener(null);
+        }
+
 
         if (login == null || pw == null || login.equals("") || pw.equals("")) {
 
@@ -321,7 +342,9 @@ public class HTMetricChartEditActivity extends Activity {
             finish();
 
         } else {
+
             getMetric();
+
         }
     }
 
@@ -375,18 +398,25 @@ public class HTMetricChartEditActivity extends Activity {
             // Today
             TextView mTitleTextView = (TextView) datePicker.findViewById(R.id.date_text);
             mTitleTextView.setText("Today");
+            if(enableFlag==false) {
+                leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
+                leftArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
+                    @Override
+                    public void onClick(View v) {
+
+                        leftDateButtonClicked();
+                    }
+                });
+            }
+            else{
+                leftArrow.setImageResource(R.drawable.ht_arrow_left_gray);
+                leftArrow.setOnClickListener(null);
+
+            }
             rightArrow.setImageResource(R.drawable.ht_arrow_right_gray);
 
-            leftArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
-
-                    leftDateButtonClicked();
-                }
-            });
 
             rightArrow.setOnClickListener(null);
 
@@ -395,27 +425,35 @@ public class HTMetricChartEditActivity extends Activity {
             // Yesterday
             TextView mTitleTextView = (TextView) datePicker.findViewById(R.id.date_text);
             mTitleTextView.setText("Yesterday");
+            if(enableFlag==false) {
+                leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
+                rightArrow.setImageResource(R.drawable.ht_arrow_right_blue);
 
-            leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
-            rightArrow.setImageResource(R.drawable.ht_arrow_right_blue);
+                leftArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            leftArrow.setOnClickListener(new ImageView.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                @Override
-                public void onClick(View v) {
+                        leftDateButtonClicked();
+                    }
+                });
 
-                    leftDateButtonClicked();
-                }
-            });
+                rightArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            rightArrow.setOnClickListener(new ImageView.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                @Override
-                public void onClick(View v) {
+                        rightDateButtonClicked();
+                    }
+                });
+            }
+            else{
+                leftArrow.setImageResource(R.drawable.ht_arrow_left_gray);
+                rightArrow.setImageResource(R.drawable.ht_arrow_right_gray);
 
-                    rightDateButtonClicked();
-                }
-            });
+                leftArrow.setOnClickListener(null);
+                rightArrow.setOnClickListener(null);
+            }
 
         } else {
 
@@ -428,27 +466,35 @@ public class HTMetricChartEditActivity extends Activity {
             calendar.setTime(passDate);
 
             mTitleTextView.setText(dateFormat.format(calendar.getTime()));
+            if(enableFlag==false) {
+                leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
+                rightArrow.setImageResource(R.drawable.ht_arrow_right_blue);
 
-            leftArrow.setImageResource(R.drawable.ht_arrow_left_blue);
-            rightArrow.setImageResource(R.drawable.ht_arrow_right_blue);
+                leftArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            leftArrow.setOnClickListener(new ImageView.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                @Override
-                public void onClick(View v) {
+                        leftDateButtonClicked();
+                    }
+                });
 
-                    leftDateButtonClicked();
-                }
-            });
+                rightArrow.setOnClickListener(new ImageView.OnClickListener() {
 
-            rightArrow.setOnClickListener(new ImageView.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                @Override
-                public void onClick(View v) {
+                        rightDateButtonClicked();
+                    }
+                });
+            }
+            else{
+                leftArrow.setImageResource(R.drawable.ht_arrow_left_gray);
+                rightArrow.setImageResource(R.drawable.ht_arrow_right_gray);
 
-                    rightDateButtonClicked();
-                }
-            });
+                leftArrow.setOnClickListener(null);
+                rightArrow.setOnClickListener(null);
+            }
         }
 
         final String whichMetric;

@@ -1,3 +1,13 @@
+2019-03-06
+1. Upgrade version - 2 hours
+   - Upgrade new version 
+     com.android.tools.build:gradle:1.0.0 -> 3.2.0
+     android gradle version 2.0.2 -> 4.6
+     targetSdkversion 21 -> 28
+   - Fixed upgrading version issues
+2. Change week to date - 2 hours   
+3. Select any date and then can Edit - 3 hours
+     
 1. res/layout/activity_htmetric_chart.xml
   1W 2W ...
   Label ID: xAxisLabelLayout4
@@ -9,3 +19,15 @@
   0,1,2,3
    /res/layout/activity_activity_planner_calories_consumed.xml
    HTPlannerClaoriesConsumedActivity.Java
+
+2. Edit Date change
+   metricHistroyLayout: For clicking
+   res/layout/HTMetricChartActivity.java
+   metricHistoryLayout.addView(contentView);
+
+  - activity_htmetric_chart_edit.xml : Edit layout
+  - HTMetricChartEditActivity.java
+
+Username:ReactDevs@setpointhealth.com
+Pass:Andrey2019
+https://www.screencast.com/t/Waxzxx7b

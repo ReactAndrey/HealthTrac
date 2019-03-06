@@ -136,13 +136,14 @@
                     android:id="@+id/xAxisLabelLayout3"
                     android:paddingRight="2dp"
                     android:paddingLeft="2dp"></LinearLayout>
+
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/xAxisLabelLayout4"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:layout_marginTop="205dp"
                     android:layout_marginLeft="48dp"
-                    android:id="@+id/xAxisLabelLayout4"
+                    android:layout_marginTop="205dp"
+                    android:orientation="horizontal"
                     android:paddingLeft="2dp"
                     android:paddingRight="2dp"></LinearLayout>
 

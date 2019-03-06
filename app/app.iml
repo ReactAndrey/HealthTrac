@@ -70,13 +70,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/healthTrac/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/healthTrac/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/healthTrac/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testHealthTrac/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testHealthTrac/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testHealthTrac/assets" type="java-test-resource" />
@@ -84,6 +77,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testHealthTrac/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testHealthTrac/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testHealthTrac/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestHealthTrac/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -91,13 +91,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
@@ -105,6 +98,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
@@ -133,6 +133,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-libraries" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/checkHealthTracDebugClasspath" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/checkHealthTracReleaseClasspath" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
@@ -158,6 +159,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
@@ -166,6 +168,7 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-wallet-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-plus-8.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\Android Project\Health_Trac\app\libs\ZBarDecoder.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-appinvite-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-appindexing-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement-8.3.0" level="project" />
@@ -183,7 +186,6 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-wearable-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-panorama-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-cast-8.3.0" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:E.\Android Project\HealthTrac\HealthTrac\app\libs\ZBarDecoder.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-vision-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-gcm-8.3.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4@jar" level="project" />

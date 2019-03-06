@@ -13,6 +13,7 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -563,7 +565,7 @@ public class HTMetricChartActivity extends Activity {
                     String responseText = EntityUtils.toString(entity);
 
                     Document doc = XMLFunctions.XMLfromString(responseText);
-
+                    //Log.i("responseText=",responseText);
                     NodeList error = doc.getElementsByTagName("error");
                     NodeList nodes = doc.getElementsByTagName("chart_details");
 
@@ -634,6 +636,7 @@ public class HTMetricChartActivity extends Activity {
                                 i = 1;
                                 while (XMLFunctions.tagExists(e2, "chart_" + i + "_label")) {
                                     tempString = XMLFunctions.getValue(e2, "chart_" + i + "_label");
+                                    //Log.i("tempstring=",tempString);
                                     dailyChartLabel.add(htGlobals.cleanStringAfterReceiving(tempString));
                                     i++;
                                 }
@@ -914,6 +917,43 @@ public class HTMetricChartActivity extends Activity {
 
     }
 
+    // Andrey 2019-3-6 start
+    public Date addDays(Date date, int days)
+    {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.add(Calendar.DATE, days); //minus number would decrement the days
+        return cal.getTime();
+    }
+    private void setText(int type){
+        //String str="3/6";
+        Date c_date = new Date(System.currentTimeMillis());
+        SimpleDateFormat s_format = new SimpleDateFormat("M/d");
+        if(type==1) {
+            //str = String.valueOf(date.getYear()) + str;
+            for (int i = 6; i >= 0; i--) {
+                Date myDate = addDays(c_date, -i);
+                if (i % 2 == 0)
+                    //s_str = s_str + s_format.format(myDate) + ",";
+                    xAxisLabels1[6-i].setText(s_format.format(myDate));
+                else
+                    xAxisLabels1[6-i].setText("");
+                    //s_str = s_str + " ,";
+            }
+        }
+        else{
+            for(int i = 13; i >= 0; i--){
+                Date myDate;
+                myDate = addDays(c_date, -i);
+                if(i==13 || i==9 || i==4 || i==0)
+                    xAxisLabels2[13-i].setText(s_format.format(myDate));
+                else
+                    xAxisLabels2[13-i].setText("");
+
+            }
+        }
+    }
+    // Andrey 2019-3-6 end
     private void showChart(){
         scrollView.setVisibility(View.VISIBLE);
 
@@ -938,11 +978,17 @@ public class HTMetricChartActivity extends Activity {
         }
 
         //x axis label
+        for(int i=0; i < dailyChartLabel.size(); i++){
+            Log.i("Daily =",String.valueOf(i) + ":" + dailyChartLabel.get(i));
+        }
+
         for(int i = 0; i < 7; i++){
-            xAxisLabels1[i].setText(dailyChartLabel.get(i+23));
+            //xAxisLabels1[i].setText(dailyChartLabel.get(i+23));
+            setText(1);
         }
         for(int i = 0; i < 14; i++){
-            xAxisLabels2[i].setText(dailyChartLabel.get(i+16));
+            //xAxisLabels2[i].setText(dailyChartLabel.get(i+16));
+            setText(2);
         }
         for(int i = 0; i < 4; i++){
             xAxisLabels3[i].setText(dailyChartLabel.get(i));

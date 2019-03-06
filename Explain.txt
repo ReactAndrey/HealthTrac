@@ -1,0 +1,11 @@
+1. res/layout/activity_htmetric_chart.xml
+  1W 2W ...
+  Label ID: xAxisLabelLayout4
+ HTMetricChartActivity.java
+
+-1W, 2W, 1M, 3M click Event
+  updateChartRangeSelectorView(index)
+
+  0,1,2,3
+   /res/layout/activity_activity_planner_calories_consumed.xml
+   HTPlannerClaoriesConsumedActivity.Java

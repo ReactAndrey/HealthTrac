@@ -16,6 +16,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -1499,6 +1500,9 @@ public class HTPlannerCaloriesConsumedActivity extends Activity {
         yAxisLabel5.setText("0");
 
         //x axis label
+//        for(int i=0; i < dailyChartLabel.size(); i++){
+//            Log.i("Daily =",String.valueOf(i) + ":" + dailyChartLabel.get(i));
+//        }
         for (int i = 0; i < 7; i++) {
             xAxisLabels1[i].setText(dailyChartLabel.get(i + 23));
         }
